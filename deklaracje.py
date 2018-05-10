@@ -1,21 +1,21 @@
-#  from selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By
 from selenium import webdriver
+from Locators import Locators
 
-class Deklaracje(object):
+class Testy():
 
-    def __init__(self):
+    def test1(self):
 
-        self.driver = webdriver.Chrome('E:\Python\Drivery\chromedriver.exe')
-        self.driver.maximize_window()
-        self.driver.get('https://ncplusgo.pl')
+        driver = webdriver.Chrome('E:\Python\Drivery\chromedriver.exe')
+        driver.maximize_window()
+        driver.get('https://ncplusgo.pl')
+        driver.find_element(By.XPATH, Locators.logo).click()
 
-    def zaloguj(self, name = '//*[@id="top"]/div/div/div/div/nav/ul/li[3]/a/img'):
+    def test2(self):
+        driver = webdriver.Chrome('E:\Python\Drivery\chromedriver.exe')
+        driver.maximize_window()
+        driver.get('https://ncplusgo.pl')
+        driver.find_element(By.XPATH, Locators.terazwtv).click()
 
-        z = self.driver.find_element_by_xpath(name).click()
-        #  t = By.XPATH, '/html/body/header/div/div/div/div/div/nav/a[1]'  #  teraz w tv
-        #  p = By.XPATH, '/html/body/header/div/div/div/div/div/nav/a[2]'  #  program tv
-        #  z = By.XPATH, '//*[@id="top"]/div/div/div/div/nav/ul/li[4]/a/img'  #  zaloguj
-
-
-run = Deklaracje()
-run.zaloguj()
+run = Testy()
+run.test1()
