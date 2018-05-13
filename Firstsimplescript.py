@@ -1,6 +1,5 @@
 from Mainpage import Home
 import unittest
-import Environment
 from selenium import webdriver
 
 
