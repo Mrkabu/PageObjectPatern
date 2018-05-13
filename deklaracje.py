@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from Locators import Locators
-import unittest
 
-class Testy(unittest.TestCase):
+class Testy():
 
     def __init__(self):
         self.driver = webdriver.Chrome('E:\Python\Drivery\chromedriver.exe')

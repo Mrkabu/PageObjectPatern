@@ -1,5 +1,3 @@
-from selenium import webdriver
-
 class Locators(object):
 
     logo = '//*[@id="top"]/div/div/div/div/nav/ul/li[2]/a'
